@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #17345c;
+  background: #f7fbff;
+  font-family: 'Nunito', ui-rounded, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(255, 220, 232, 0.55), transparent 24rem),
+    radial-gradient(circle at 85% 5%, rgba(217, 245, 229, 0.45), transparent 22rem),
+    linear-gradient(180deg, #f7fbff 0%, #e7f5ff 100%);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  max-width: 100%;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #91d5ff;
+  outline-offset: 2px;
+}
+
+.cloud-pattern {
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(191, 230, 255, 0.65) 0 18px, transparent 19px),
+    radial-gradient(circle at 54px 24px, rgba(255, 255, 255, 0.9) 0 22px, transparent 23px);
+  background-size: 118px 72px;
+}
+
+.fc {
+  --fc-border-color: #dceaf7;
+  --fc-today-bg-color: rgba(191, 230, 255, 0.35);
+  --fc-button-bg-color: #17345c;
+  --fc-button-border-color: #17345c;
+  --fc-button-hover-bg-color: #102541;
+  --fc-button-active-bg-color: #102541;
+  color: #17345c;
+}
+
+.fc .fc-toolbar-title {
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 800;
+}
+
+.cozy-calendar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.cozy-calendar .fc {
+  min-width: 0;
+}
+
+.cozy-calendar .fc-button {
+  border-radius: 0.85rem;
+  font-weight: 800;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.75rem;
+}
+
+.cozy-calendar .fc-list-empty {
+  background: #f7fbff;
+}
+
+.content-start {
+  align-content: start;
+}
+
+@media (max-width: 639px) {
+  h1 {
+    overflow-wrap: anywhere;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  .shadow-cozy {
+    box-shadow: 0 12px 32px rgba(23, 52, 92, 0.08);
+  }
+}
+
+@media (max-width: 767px) {
+  .fc .fc-toolbar {
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .fc .fc-toolbar-title {
+    max-width: 11rem;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .fc .fc-toolbar-chunk {
+    display: flex;
+    min-width: 0;
+  }
+
+  .fc .fc-toolbar-chunk:first-child {
+    flex: 1 1 auto;
+  }
+
+  .fc .fc-toolbar-chunk:last-child {
+    flex: 0 0 auto;
+  }
+
+  .fc .fc-button-group {
+    display: flex;
+    width: 100%;
+  }
+
+  .fc .fc-button {
+    min-width: 2.75rem;
+    padding: 0.45rem 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .fc .fc-footer-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .fc .fc-footer-toolbar .fc-toolbar-chunk:nth-child(2) {
+    display: none;
+  }
+
+  .fc .fc-footer-toolbar .fc-toolbar-chunk:last-child {
+    justify-content: end;
+  }
+
+  .fc .fc-list-event-title,
+  .fc .fc-list-event-time {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

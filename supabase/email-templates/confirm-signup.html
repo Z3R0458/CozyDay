@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confirm your CozyDay email</title>
+  </head>
+  <body style="margin:0; padding:0; background:#E7F5FF; font-family:Nunito, Arial, sans-serif; color:#17345C;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#E7F5FF; padding:32px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px; background:#F7FBFF; border:1px solid #DCEAF7; border-radius:28px; overflow:hidden;">
+            <tr>
+              <td style="padding:28px 28px 18px; background:#BFE6FF;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <div style="font-size:26px; font-weight:800; letter-spacing:0; color:#102541;">CozyDay</div>
+                      <div style="font-size:14px; font-weight:700; color:#17345C; margin-top:4px;">Your private planner and photo diary</div>
+                    </td>
+                    <td align="right" style="font-size:36px; line-height:1;">☁</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:34px 28px 10px;">
+                <div style="margin:0 auto 22px; width:112px; height:82px; background:#FFFFFF; border-radius:44px; box-shadow:0 12px 32px rgba(23,52,92,0.12); text-align:center; position:relative;">
+                  <div style="font-size:42px; line-height:82px;">☁</div>
+                </div>
+                <h1 style="margin:0; font-size:30px; line-height:1.2; color:#102541; text-align:center;">Confirm your email address</h1>
+                <p style="margin:16px auto 0; max-width:460px; font-size:16px; line-height:1.6; font-weight:700; color:#71839B; text-align:center;">
+                  Welcome to CozyDay. Confirm your email so your tasks, notes, reminders, and private moments stay connected to your account.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:24px 28px 30px;">
+                <a href="{{ .ConfirmationURL }}" style="display:inline-block; background:#17345C; color:#FFFFFF; text-decoration:none; font-size:16px; font-weight:800; padding:15px 26px; border-radius:18px;">
+                  Confirm email
+                </a>
+                <p style="margin:22px auto 0; max-width:500px; font-size:13px; line-height:1.6; color:#71839B;">
+                  If the button does not work, copy and paste this link into your browser:
+                </p>
+                <p style="margin:8px auto 0; max-width:500px; font-size:12px; line-height:1.5; word-break:break-all;">
+                  <a href="{{ .ConfirmationURL }}" style="color:#17345C;">{{ .ConfirmationURL }}</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px 28px 28px; background:#FFFFFF; border-top:1px solid #DCEAF7;">
+                <p style="margin:0; font-size:13px; line-height:1.6; color:#71839B; text-align:center;">
+                  Photos in CozyDay are private and automatically expire after 7 days. Written notes and captions remain available.
+                </p>
+                <p style="margin:12px 0 0; font-size:12px; line-height:1.6; color:#71839B; text-align:center;">
+                  You received this email because you signed up for CozyDay.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
